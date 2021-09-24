@@ -16,3 +16,8 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/',[HomeController::class,'index']);
 Route::post('/create',[HomeController::class,'create']);
+Route::get('/confirm',[HomeController::class,'confirm']);
+Route::post('/send', [HomeController::class, 'send']);
+Route::get('/show', [HomeController::class, 'show']);
+Route::post('/search', [HomeController::class, 'search']);
+Route::post('/delete', [HomeController::class, 'delete'])->name('delete');

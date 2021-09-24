@@ -15,10 +15,11 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->autoIncrement();
+
             $table->string('name', 255);
             $table->tinyInteger('gender')->default(0);
             $table->string('email', 255);
-            $table->char('postcode', 8);
+            $table->char('postcode');
             $table->string('address', 255);
             $table->string('building_name', 255)->nullable();
             $table->text('opition')->default('');
